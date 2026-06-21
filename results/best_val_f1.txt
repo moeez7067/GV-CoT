@@ -1,0 +1,1 @@
+Best Val F1: 0.6473 at epoch 39

@@ -1,0 +1,15 @@
+Stage 4 — Symbolic Constraints
+================================
+Transitivity violation rate : 0.0773  (low — GAT respects chain flow)
+Contradiction rate          : 0.4054  (expected — multi-hop topic jumps)
+Mean consistency score      : 0.8591  (high — locally coherent predictions)
+GAT baseline F1 (gold)      : 0.6473
+GAT baseline F1 (hall)      : 0.6124
+GAT baseline Macro F1       : 0.6299
+Heuristic correction delta  : -0.0181 (made things worse — GAT already reliable)
+
+KEY INSIGHT:
+Negative result is publishable. Semantic edges are NOT logical entailment edges.
+GAT learns semantic smoothing, not symbolic reasoning chains.
+Naive transitivity constraints fail because graph structure does not
+encode formal proof chains. This is the main Stage 4 conclusion.

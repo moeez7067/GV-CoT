@@ -1,0 +1,20 @@
+============================================================
+SBERT BASELINE REPORT
+============================================================
+
+── Val Set Statistics ────────────────────────────────────
+  Val graphs   : 17,650
+  Val nodes    : 151,821
+  Gold   (1)   : 62,922  (41.44%)
+  Halluc (0)   : 88,899  (58.56%)
+
+── Baseline: Predict ALL 0 (hallucinated) ────────────────
+  F1        : 0.0000
+  Precision : 0.0000
+  Recall    : 0.0000
+
+── Baseline: Predict ALL 1 (gold) ───────────────────────
+  F1        : 0.5860
+  Precision : 0.4144
+  Recall    : 1.0000
+

@@ -1,0 +1,56 @@
+# ─────────────────────────────────────────────────────────────
+#  GV-CoT — .gitignore
+# ─────────────────────────────────────────────────────────────
+
+# ─── Python ───
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.ipynb_checkpoints/
+
+# ─── Virtual environments ───
+.venv/
+venv/
+env/
+.env
+
+# ─── Logs & temp ───
+*.log
+*.tmp
+*.bak
+
+# ─── OS / editor junk ───
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/
+.claude/
+
+# ─────────────────────────────────────────────────────────────
+#  Large data artifacts — regenerate with the pipeline scripts.
+#  Excluded from git because they are big and reproducible.
+#  Remove a line below if you DO want to commit that file.
+# ─────────────────────────────────────────────────────────────
+
+# Source datasets (re-download via data/load_datasets.py)
+data/hotpotqa_train.json
+data/musique_train.json
+
+# Generated CoT chains (regenerate via data/stage0_*.py)
+data/cot_chains.json
+data/musique_cot_chains.json
+data/musique_cot_checkpoint_*.json
+
+# Built graphs — ~3.4 GB total (regenerate via graphs/build_*.py)
+graphs/*.pkl
+
+# ─────────────────────────────────────────────────────────────
+#  Kept in git on purpose (do NOT ignore):
+#    - models/gat_best.pt          (1 MB trained model — the deliverable)
+#    - data/_st_cache/samples_*.json (needed by app.py at runtime)
+#    - graph_template.html         (the 3D graph, loaded by app.py)
+#    - results/**                  (all evaluation outputs)
+# ─────────────────────────────────────────────────────────────

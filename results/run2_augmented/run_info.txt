@@ -1,0 +1,14 @@
+Run 2 — Augmented Features (397-dim, unscaled)
+===============================================
+Node features  : 384 SBERT + 13 structural features (unscaled)
+Best Val F1    : 0.6473 (epoch 13)
+Early stop     : epoch 28 (patience=15)
+Class weights  : [1.0, 1.4]
+Gold Precision : 0.5295
+Gold Recall    : 0.8327
+Gold F1        : 0.6473
+Hall Precision : 0.8008
+Hall Recall    : 0.4763
+Hall F1        : 0.5973
+Verdict        : Structural features dominated decision boundary.
+                 Fix: scale structural features by 0.1 and retrain.

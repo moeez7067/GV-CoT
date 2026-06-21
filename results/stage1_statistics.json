@@ -1,0 +1,31 @@
+{
+  "total_graphs": 89625,
+  "total_nodes": 670324,
+  "total_edges": 580699,
+  "avg_nodes_per_graph": 7.4792,
+  "median_nodes_per_graph": 6.0,
+  "min_nodes_per_graph": 1,
+  "max_nodes_per_graph": 160,
+  "avg_edges_per_graph": 6.4792,
+  "gold_nodes": 282397,
+  "distractor_nodes": 387927,
+  "gold_percent": 42.1284,
+  "structural": {
+    "empty_graphs": 0,
+    "no_edge_graphs": 1379,
+    "nodes_missing_embedding": 0,
+    "nodes_wrong_embedding_dim": 0,
+    "nodes_missing_label": 0
+  },
+  "leakage": {
+    "duplicate_ids": 0,
+    "duplicate_questions": 0
+  },
+  "verdict": {
+    "label_health": "HEALTHY",
+    "graph_size": "OK",
+    "no_leakage": "OK",
+    "structural_integrity": "WARNING",
+    "ready_for_stage2": false
+  }
+}

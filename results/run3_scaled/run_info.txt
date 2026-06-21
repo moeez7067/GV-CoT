@@ -1,0 +1,17 @@
+Run 3 — Augmented Features (397-dim, scaled x0.1)
+===============================================
+Node features  : 384 SBERT + 13 structural features (scaled x0.1)
+Best Val F1    : 0.6473 (epoch 39)
+Early stop     : epoch 54 (patience=15)
+Class weights  : [1.0, 1.4]
+Gold Recall    : 0.8179
+Hall Recall    : 0.4982
+Verdict        : Scaling fixed boundary collapse. Better balance than run 2.
+                 F1 unchanged but healthier recall split.
+                 Option: drop gold weight to 1.2 for more hall recall.
+
+FINAL INTERPRETATION:
+Performance gains are from structural priors and bias shaping, not
+true graph-based reasoning differentiation. GAT acts as a smoothed
+SBERT aggregator. F1 ceiling (~0.65) is representation-limited.
+Stage 4 proceeds with this understanding.

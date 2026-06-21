@@ -1,0 +1,11 @@
+MuSiQue CoT Evaluation
+========================
+Model          : Run 3 (trained on HotpotQA, no retraining)
+Graphs         : 19,937 CoT-based graphs
+Gold ratio     : 34.51% (vs 11.69% paragraph-based)
+F1 Gold        : 0.5673  (HotpotQA: 0.6473, delta: -0.0800)
+F1 Hall        : 0.5001  (HotpotQA: 0.6124, delta: -0.1123)
+F1 Macro       : 0.5337  (HotpotQA: 0.6299, delta: -0.0962)
+Generalisation : 84.7% of HotpotQA performance retained
+Verdict        : Moderate cross-dataset generalisation confirmed.
+                 Over-predicts gold (recall=0.88) due to domain shift.

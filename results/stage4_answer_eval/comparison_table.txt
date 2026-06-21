@@ -1,0 +1,59 @@
+=================================================================
+GV-CoT — Full Results Comparison Table
+=================================================================
+
+TABLE 1: GV-CoT Training Runs (Ablation Study)
+-----------------------------------------------------------------
+Run   Features          Class W   Best F1   Gold R   Hall R   Epoch
+----  ----------------  -------   -------   ------   ------   -----
+Run1  384-dim SBERT     1.0/1.4   0.6199    0.7305   0.5566   51
+Run2  397-dim unscaled  1.0/1.4   0.6473    0.8327   0.4763   13
+Run3  397-dim x0.1     1.0/1.4   0.6473    0.8179   0.4982   39
+
+SBERT baseline (predict all gold): F1 = 0.5860
+GV-CoT improvement over baseline:  +0.0613 (+10.5%)
+
+-----------------------------------------------------------------
+TABLE 2: Stage 4 — Answer Correctness vs Gold Ratio
+-----------------------------------------------------------------
+Gold Ratio Range   Answer Accuracy   n
+--------------     ---------------   ------
+0.0 - 0.2         15.49%            1,394
+0.2 - 0.4         18.54%            1,381
+0.4 - 0.6         26.66%            1,748
+0.6 - 0.8         34.49%            2,392
+0.8 - 1.0         41.66%            10,735
+
+Overall accuracy   : 35.33% (6,235/17,650)
+Pearson r          : +0.1951
+Mean gold ratio delta (correct - incorrect): +0.1230
+
+-----------------------------------------------------------------
+TABLE 3: Answer Accuracy by LLM
+-----------------------------------------------------------------
+Model                  Accuracy   n
+-----                  --------   ------
+gpt-4.1-nano           43.01%     12,873
+llama-3.1-8b-instant   14.61%     4,777
+
+-----------------------------------------------------------------
+TABLE 4: Comparison with Related Work
+-----------------------------------------------------------------
+Method          Task          Ext KB  Multi-LLM  Step-level  Metric
+-----------     ----------    ------  ---------  ----------  ------
+SelfCheckGPT    WikiBio       No      Yes (3-5x)  No         AUC ~0.76
+FActScoring     Biography     Yes     Yes         No         Prec ~63%
+CoVe            List QA       No      Yes         No         Acc varies
+GV-CoT (ours)   HotpotQA CoT  No      No (1x)    Yes        F1=0.647
+                                                             r=+0.195
+
+Key advantages of GV-CoT:
+- No external knowledge base required
+- Single forward pass (no multiple LLM calls)
+- Step-level graph-based reasoning verification
+- Cross-level generalization: step supervision -> answer correctness
+- Monotone accuracy trend across gold ratio buckets (15.5% -> 41.7%)
+
+Note: Direct numerical comparison not possible due to different datasets.
+Comparison is methodological and contextual.
+=================================================================

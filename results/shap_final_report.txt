@@ -1,0 +1,58 @@
+=================================================================
+GV-CoT Stage 5 -- SHAP Attribution Report
+=================================================================
+
+Model          : Run 3 -- 397-dim scaled features
+Val graphs     : 17,650
+Gold nodes     : 62,922
+Hall nodes     : 88,899
+Method         : gradient saliency  |x * d(logit_hall)/dx|
+
+=================================================================
+Explainability Coverage  (primary metric)
+=================================================================
+
+  Coverage     : 0.8290
+  Correct      : 7,776 / 9,380 graphs
+
+  Definition: % of graphs where the highest-saliency
+  predicted-hallucinated node is truly hallucinated.
+
+-----------------------------------------------------------------
+Feature Saliency Analysis
+-----------------------------------------------------------------
+
+  Separation score (gold vs hall) : 0.0069
+  SBERT dims   mean importance    : 0.008203
+  Structural dims mean importance : 0.020033
+
+    Dim    Combined |sal|
+    388          0.064915  (structural[4])
+    389          0.060150  (structural[5])
+    387          0.042088  (structural[3])
+    384          0.029171  (structural[0])
+    396          0.023850  (structural[12])
+    385          0.019888  (structural[1])
+    364          0.018889  (SBERT)
+     37          0.018534  (SBERT)
+    124          0.017469  (SBERT)
+    195          0.016908  (SBERT)
+
+-----------------------------------------------------------------
+SBERT vs Structural Feature Contribution
+-----------------------------------------------------------------
+  SBERT (dims 0-383)      : 0.008203
+  Structural (dims 384-396): 0.020033
+  Structural / SBERT ratio : 2.4420
+
+-----------------------------------------------------------------
+Interpretation
+-----------------------------------------------------------------
+  [OK] High explainability coverage (0.8290):
+    SHAP attribution correctly localises hallucinated steps in most graphs.
+  [OK] Structural features have higher mean saliency than SBERT dims.
+    Position/degree/connective features are driving predictions.
+
+=================================================================
+Stage 5 SHAP Attribution -- COMPLETE
+=================================================================

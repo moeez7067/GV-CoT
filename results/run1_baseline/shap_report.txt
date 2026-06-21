@@ -1,0 +1,46 @@
+=================================================================
+GV-CoT Stage 3 — Gradient Saliency Attribution Report
+=================================================================
+
+Val set         : 17,650 graphs
+Graphs sampled  : 5,000
+Gold nodes seen : 17,591
+Hall nodes seen : 25,475
+Method          : input x gradient saliency  (|x * grad_x sum_P(gold)|)
+
+-----------------------------------------------------------------
+Mean saliency magnitude per class (top 10 dims)
+-----------------------------------------------------------------
+  Dim      Gold |sal|      Hall |sal|     D (G-H)
+    364        0.010405        0.012157   -0.001752
+    176        0.008766        0.011528   -0.002761
+     37        0.008479        0.010853   -0.002374
+    287        0.007816        0.010333   -0.002517
+    141        0.007701        0.010286   -0.002585
+    294        0.007487        0.009508   -0.002021
+    250        0.007524        0.009169   -0.001645
+    136        0.007130        0.009370   -0.002240
+    308        0.007218        0.009048   -0.001830
+    381        0.007028        0.008854   -0.001826
+
+-----------------------------------------------------------------
+Separation score (cosine distance of saliency vectors)
+-----------------------------------------------------------------
+  0.004454  (0=identical features, 1=orthogonal)
+
+-----------------------------------------------------------------
+Prediction entropy per class (lower = more confident)
+-----------------------------------------------------------------
+  Gold        : 0.634666 +/- 0.070349
+  Hallucinated: 0.634243 +/- 0.080322
+
+-----------------------------------------------------------------
+Interpretation
+-----------------------------------------------------------------
+  Low separation: GAT may rely on the same dims for both classes.
+    Consider adding node-level features (position, length, connectives).
+  Model is more confident on hallucinated nodes -- may be over-fitting to majority class.
+
+=================================================================
+Stage 3 Attribution -- COMPLETE
+=================================================================

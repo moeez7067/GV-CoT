@@ -1,0 +1,40 @@
+=================================================================
+GV-CoT Stage 4 - Answer Evaluation Report (Option A)
+=================================================================
+
+Val graphs evaluated : 17,650
+Overall answer accuracy: 0.3533 (6,235/17,650 correct)
+
+-----------------------------------------------------------------
+Gold Ratio vs Answer Correctness
+-----------------------------------------------------------------
+  Mean gold ratio - CORRECT answers  : 0.8377
+  Mean gold ratio - INCORRECT answers: 0.7146
+  Delta (correct - incorrect)         : +0.1230
+  Pearson r (gold_ratio ~ correctness): +0.1951
+
+-----------------------------------------------------------------
+Answer Accuracy by Gold Ratio Bucket
+-----------------------------------------------------------------
+  gold_ratio 0.0-0.2  ->  accuracy 0.1549  (n=1,394)
+  gold_ratio 0.2-0.4  ->  accuracy 0.1854  (n=1,381)
+  gold_ratio 0.4-0.6  ->  accuracy 0.2666  (n=1,748)
+  gold_ratio 0.6-0.8  ->  accuracy 0.3449  (n=2,392)
+  gold_ratio 0.8-1.0  ->  accuracy 0.4166  (n=10,735)
+
+-----------------------------------------------------------------
+Answer Accuracy by LLM
+-----------------------------------------------------------------
+  gpt-4.1-nano                        accuracy 0.4301  (n=12,873)
+  llama-3.1-8b-instant                accuracy 0.1461  (n=4,777)
+
+-----------------------------------------------------------------
+Interpretation
+-----------------------------------------------------------------
+  Positive correlation (r=0.1951): higher gold ratio -> more correct answers.
+    GV-CoT hallucination detection correlates with answer quality.
+  Correct answers have higher mean gold ratio (+0.1230).
+
+=================================================================
+Stage 4 Answer Evaluation - COMPLETE
+=================================================================

@@ -1,0 +1,11 @@
+MuSiQue Cross-Dataset Evaluation
+=====================================
+Model          : Run 3 (trained on HotpotQA, no retraining)
+Graphs         : 19,938 answerable questions
+Nodes/graph    : 20 paragraphs (vs 7.58 CoT steps in HotpotQA)
+F1 Gold        : 0.1962  (HotpotQA: 0.6473, delta: -0.4511)
+F1 Hall        : 0.4352  (HotpotQA: 0.6124, delta: -0.1772)
+F1 Macro       : 0.3157  (HotpotQA: 0.6299, delta: -0.3142)
+Verdict: Large drop expected due to structural mismatch (graph size,
+         gold ratio, node content type). Not a fair apples-to-apples
+         comparison. Future work: generate CoT chains from MuSiQue.

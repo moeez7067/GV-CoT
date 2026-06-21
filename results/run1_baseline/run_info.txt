@@ -1,0 +1,9 @@
+Run 1 -- Baseline (384-dim SBERT only)
+======================================
+Node features  : 384-dim SBERT embeddings only
+Structural feats: None
+Best Val F1    : 0.6199 (epoch 51)
+Early stop     : epoch 66 (patience=15)
+Class weights  : [1.0, 1.4]
+SHAP separation: 0.004454 (low -- feature problem identified)
+Verdict        : Retrain with structural features

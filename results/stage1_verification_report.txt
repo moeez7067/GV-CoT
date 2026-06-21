@@ -1,0 +1,283 @@
+======================================================================
+STAGE 1 VERIFICATION REPORT
+======================================================================
+
+── 1. Dataset Statistics ─────────────────────────────────────────────
+  Total graphs     : 89,625
+  Total nodes      : 670,324
+  Total edges      : 580,699
+  Avg nodes/graph  : 7.48
+  Median nodes     : 6.0
+  Min nodes        : 1
+  Max nodes        : 160
+  Avg edges/graph  : 6.48
+  Gold nodes  (1)  : 282,397  (42.13%)
+  Distractor  (0)  : 387,927  (57.87%)
+
+── 2. Graph Structure Validation ─────────────────────────────────────
+  [OK]   Empty graphs: 0
+  [FAIL] Graphs with no edges: 1,379 (first 5 shown)
+         5a80a9c85542996402f6a5d9
+         5a7f5bf65542994857a766fe
+         5ab83d4c55429934fafe6d2c
+         5abc1ba35542993a06baf88b
+         5a8696095542991e77181667
+  [OK]   Nodes missing embedding: 0
+  [OK]   Nodes with wrong embedding dim: 0
+  [OK]   Nodes missing label: 0
+
+  Total structural issues: 1379
+
+── 3. Random Sample Inspection (20 graphs) ───────────────────────────
+
+  ID : 5ae0000455429942ec259bcc
+  Q  : Richard Dalton is a former editor of the Whole Earth Software Review, he was a featured columnist fo
+  Ans: San Francisco
+  Nodes: 4  Gold: 0  Dist: 4
+    [ 0 DIST] The question references InformationWeek, which is a digital magazine.
+    [ 1 DIST] Based on knowledge of major tech and business publications, InformationWeek is headquartered in the 
+    [ 2 DIST] The headquarters of InformationWeek is located in San Francisco, California.
+    [ 3 DIST] No contradicting information is available, and San Francisco is a well-known hub for technology and 
+
+  ID : 5ae02e5755429942ec259c40
+  Q  : In between Junction Canal and California Aqueduct which one was last used in 1871, and was then aban
+  Ans: Junction Canal
+  Nodes: 5  Gold: 4  Dist: 1
+    [ 0 GOLD] Identify the two canals mentioned in the question The two canals mentioned in the question are: Junc
+    [ 1 GOLD] Learn about the history of the California Aqueduct The California Aqueduct is a large water transpor
+    [ 2 GOLD] Consider the history of the Junction Canal After searching online, I found the information about the
+    [ 3 GOLD] Determine the usage pattern of the Junction Canal From my previous step, it is likely that the Junct
+    [ 4 DIST] Analyze the remaining information Based on my analysis, I can see that the Junction Canal was abando
+
+  ID : 5a8baf235542996e8ac889c2
+  Q  : Jon Bokenkamp wrote the screen play for the film starring which two actors?
+  Ans: Angelina Jolie and Ethan Hawke
+  Nodes: 5  Gold: 2  Dist: 3
+    [ 0 DIST] Identify the question's subject: The question asks about a film screenplay written by Jon Bokenkamp 
+    [ 1 DIST] Research Jon Bokenkamp's filmography: Jon Bokenkamp is a screenwriter known for various works in fil
+    [ 2 DIST] Identify the most notable film screenplay: Jon Bokenkamp's most well-known film screenplay work is f
+    [ 3 GOLD] Determine the stars of that film: However, the most prominent Jon Bokenkamp screenplay film would be
+    [ 4 GOLD] Correct identification: Without additional context about which specific film is being referenced, th
+
+  ID : 5a734d4e5542994cef4bc51e
+  Q  : What was the former name of the racing team that the No. 31 LMP2 Oreca 07 belongs to?
+  Ans: DC Racing
+  Nodes: 4  Gold: 0  Dist: 4
+    [ 0 DIST] Identify the team and its current name The No. 31 LMP2 Oreca 07 racing team belongs to a team called
+    [ 1 DIST] Determine the connection between the current name and its former name The Whelen Engineering Racing 
+    [ 2 DIST] Recall historical racing team name changes After conducting research, we can recall that the team Wh
+    [ 3 DIST] Identify other team name changes However, the No. 31 team started initially as Extreme Speed Motorsp
+
+  ID : 5a723b3655429971e9dc9367
+  Q  : What is the name of the capital city which the WMFX rock radio station serves in South Carolina?
+  Ans: Columbia
+  Nodes: 1  Gold: 1  Dist: 0
+    [ 0 GOLD] I cannot verify the capital of South Carolina that serves the WMFX station.
+
+  ID : 5ae453c75542995dadf24323
+  Q  : What city, formerly known as Pitic, had an newspaper that formed an alliance as Frontera?
+  Ans: Hermosillo
+  Nodes: 8  Gold: 3  Dist: 5
+    [ 0 DIST] Research historical cities called Pitic: First, I will look into cities that were formerly known as 
+    [ 1 DIST] Identify significant cities that fit the 'Pitic' alias: From the research, I will narrow it down to 
+    [ 2 DIST] Verify newspaper presence in the identified city: Next, I will verify if the selected city has any c
+    [ 3 DIST] Research Frontera alliance in the identified newspaper: Now that we have a newspaper, I will look in
+    [ 4 DIST] Link the Frontera alliance to the newspaper in question: Finally, I will make sure that there is an 
+    [ 5 GOLD] Analyze and conclude: From my research, I found one significant city named Pitic that is now known a
+    [ 6 GOLD] Hermosillo connection to the newspaper and Frontera alliance: The city is associated with El Imparci
+    [ 7 GOLD] Based upon my analysis I have identified Hermosillo as the city in question.
+
+  ID : 5ade05215542997dc7907126
+  Q  : Meryl Silverburgh is a video game character that as redesigned and reintroduced in a videogame produ
+  Ans: Konami Computer Entertainment Japan
+  Nodes: 8  Gold: 6  Dist: 2
+    [ 0 GOLD] Identify the character: Meryl Silverburgh is a character in the Metal Gear series. This is a key pie
+    [ 1 DIST] Relevance of the Metal Gear series: The Metal Gear series is known for having undergone various revi
+    [ 2 GOLD] Company associations with the Metal Gear series: The Metal Gear series is primarily associated with 
+    [ 3 GOLD] Analysis of character redesigns and game releases: Since Meryl Silverburgh is a character in the Met
+    [ 4 GOLD] Final connection to the company: Based on the association with Konami, the company that has produced
+    [ 5 GOLD] Verification of Konami-produced Metal Gear games featuring Meryl Silverburgh: Konami has released se
+    [ 6 DIST] Redesigns and updates: Throughout these games, Meryl's appearance has been revised. For instance, th
+    [ 7 GOLD] The final answer: Meryl Silverburgh, the redesigned character, has appeared in numerous Metal Gear s
+
+  ID : 5ae20b6c5542997283cd235b
+  Q  : Heinkel HD 23 was a type of plane that was held on the craft that were first developed when?
+  Ans: early twentieth century
+  Nodes: 4  Gold: 2  Dist: 2
+    [ 0 GOLD] Research Background Information: The Heinkel HD 23 is an aircraft model developed by the German airc
+    [ 1 GOLD] Identifying the Historical Context: Heinkel HD 23 is known to be an early model of seaplane produced
+    [ 2 DIST] Determining the Year: Considering that 1930s was the decade when this seaplane model came out, the i
+    [ 3 DIST] Finding the Specific Year: The first developed seaplane, which is Heinkel HD 23, was produced in aro
+
+  ID : 5ade6de15542997c77adee27
+  Q  : Anna Carlsson, is a German voice actress from where, she voices in the German-language dubs of a num
+  Ans: Frankfurt am Main
+  Nodes: 6  Gold: 6  Dist: 0
+    [ 0 GOLD] Understand the question: The question asks about Anna Carlsson, a German voice actress, and specifie
+    [ 1 GOLD] Clarify the key details: The question emphasizes a specific movie based on a fairy tale by Hans Chri
+    [ 2 GOLD] Recognize the connection: The narrative described is the classic plot of “The Little Mermaid,” a fai
+    [ 3 GOLD] Identify the movie being asked about: Since the question refers to the story by Andersen and mention
+    [ 4 GOLD] Summarize reasoning: Anna Carlsson voiced in German dubs of various productions, including “The Litt
+    [ 5 GOLD] Final conclusion: The movie based on the fairy tale by Hans Christian Andersen about the young merma
+
+  ID : 5a72155055429971e9dc924f
+  Q  : In what New York county did Franc Scalamandre die?
+  Ans: Nassau County
+  Nodes: 7  Gold: 2  Dist: 5
+    [ 0 DIST] I'll do my best to provide the answer. However, I need to clarify that without further context or in
+    [ 1 DIST] That being said, let's proceed with the step-by-step reasoning:
+    [ 2 DIST] Initial Search: I'll start by searching online databases and resources for information about Franc S
+    [ 3 GOLD] Possible Match: I found that there is a Franc Scalamandre, who was an architect and designer, but I 
+    [ 4 GOLD] Verify Possible Match: I couldn't confirm any details or information about an architect or designer 
+    [ 5 DIST] Consider Additional Sources: I'll consider searching for other sources such as books, academic paper
+    [ 6 DIST] Additional Search: Unfortunately, I'm unable to verify any specific information about Franc Scalaman
+
+  ID : 5ab31ec055429976abd1bc64
+  Q  : Divian Ladwa is an English actor, known for the Oscar nominated Best Picture Lion (2016 film), he ap
+  Ans: Marvel Comics
+  Nodes: 6  Gold: 6  Dist: 0
+    [ 0 GOLD] Identify the relevant information: We need to find the comic book series that the characters in the 
+    [ 1 GOLD] Recall general knowledge about the film: 'Ant-Man and the Wasp' is based on a Marvel Comics series.
+    [ 2 GOLD] Determine which Marvel character series matches the movie title: The title suggests involvement with
+    [ 3 GOLD] Deduce from step 3 that the comic book series is: Given the involvement of the characters 'Ant-Man' 
+    [ 4 GOLD] Specify the comic book series name as 'Avengers' is a collective name: While 'Ant-Man' and 'the Wasp
+    [ 5 GOLD] Provide information that further clarifies the association with comic books: We also know that chara
+
+  ID : 5a8f58d15542992414482a6c
+  Q  : What year did the country, in which Ambrosius Blarer was known as an influential reformer, become a 
+  Ans: 1848
+  Nodes: 11  Gold: 7  Dist: 4
+    [ 0 GOLD] Identify the country associated with Ambrosius Blarer.
+    [ 1 GOLD] Ambrosius Blarer was a Swiss Reformer active primarily in the city of Constance and in the Swiss can
+    [ 2 DIST] Confirm the nature of Switzerland as a country.
+    [ 3 GOLD] Switzerland is known for its federal structure, comprised of multiple autonomous cantons.
+    [ 4 GOLD] Determine the historical development of Swiss sovereignty and federalism.
+    [ 5 DIST] Switzerland historically consisted of various independent or semi-independent regions and towns.
+    [ 6 GOLD] The modern Swiss Confederation's development into a federal state of relatively autonomous cantons c
+    [ 7 DIST] Consider the key event related to Swiss federalism.
+    [ 8 GOLD] The Swiss Federal Constitution of 1848 is widely regarded as establishing the modern federal state o
+    [ 9 DIST] Infer the answer based on known historical facts.
+    [10 GOLD] Since Ambrosius Blarer was influential during the Reformation in the early 16th century, and the mov
+
+  ID : 5ade53ae5542992fa25da74c
+  Q  : Does Leea or Gillenia have more species?
+  Ans: Leea
+  Nodes: 5  Gold: 4  Dist: 1
+    [ 0 GOLD] Identify the two genera: Leea and Gillenia.
+    [ 1 GOLD] Leea: Known to have a relatively large number of species, with estimates generally around 50 to 100 
+    [ 2 DIST] Gillenia: Known to have fewer species, with around 3 to 4 species, mainly native to North America.
+    [ 3 GOLD] Leea has significantly more species than Gillenia.
+    [ 4 GOLD] Since Leea has approximately 50–100 species and Gillenia has only about 3–4, Leea has more species t
+
+  ID : 5a74b2a155429929fddd84b5
+  Q  : Which was founded first, the University of Iowa or the University of Texas at Austin?
+  Ans: University of Iowa
+  Nodes: 5  Gold: 3  Dist: 2
+    [ 0 DIST] Identify what we need to find: The founding dates of both universities to determine which came first
+    [ 1 GOLD] Find the founding date of the University of Iowa: The University of Iowa was founded in 1847.
+    [ 2 GOLD] Find the founding date of the University of Texas at Austin: The University of Texas at Austin was f
+    [ 3 DIST] Compare the dates: 1847 comes before 1883.
+    [ 4 GOLD] Determine which was founded first: The University of Iowa was founded 36 years before the University
+
+  ID : 5a7f266355429934daa2fcf9
+  Q  : The Kinniya Divisional Secratariat is a secratariat of a country located southeast of what other cou
+  Ans: Republic of India
+  Nodes: 11  Gold: 10  Dist: 1
+    [ 0 GOLD] Identify Kinniya Divisional Secretariat's location
+    [ 1 GOLD] Kinniya Divisional Secretariat is located in Sri Lanka
+    [ 2 GOLD] Identify Sri Lanka's geographic position
+    [ 3 GOLD] Sri Lanka is an island nation located in South Asia
+    [ 4 GOLD] Determine what country is northwest of Sri Lanka
+    [ 5 GOLD] Sri Lanka is located southeast of India
+    [ 6 GOLD] India is the large South Asian country to the northwest of Sri Lanka
+    [ 7 DIST] Verify the directional relationship
+    [ 8 GOLD] If Kinniya (in Sri Lanka) is southeast of another country
+    [ 9 GOLD] Then that country must be northwest of Sri Lanka
+    [10 GOLD] That country is India
+
+  ID : 5a7cf535554299683c1c63f2
+  Q  : Faerie Stories is the second album by Scottish Celtic fusion group Peatbog Faeries, released in 2001
+  Ans: Celtic music
+  Nodes: 12  Gold: 8  Dist: 4
+    [ 0 DIST] 1. Identify the music genre that is being asked about.
+    [ 1 GOLD] The question mentions Celtic fusion, indicating that the answer is a subcategory of a broader music 
+    [ 2 DIST] 2. Recall the general categories of folk music traditions.
+    [ 3 GOLD] There are several traditional folk music genres, including English, Welsh, Irish, Scottish, and Bret
+    [ 4 DIST] 3. Analyze the given information about the Peatbog Faeries' album.
+    [ 5 GOLD] The album is labeled as Scottish Celtic fusion group, which implies that it is a fusion of tradition
+    [ 6 GOLD] 4. Recall the term for the broad grouping of music genres that evolved out of the folk music traditi
+    [ 7 GOLD] Based on the information provided, the term is likely to be a general category that encompasses trad
+    [ 8 DIST] 5. Narrow down the options to the most relevant general category.
+    [ 9 GOLD] Based on the information provided, the most likely answer is a term that is broad enough to encompas
+    [10 GOLD] Identify Celtic as a music genre.
+    [11 GOLD] Note that "Celtic" can refer to more than one music tradition.
+
+  ID : 5ae0f764554299422ee99586
+  Q  : What are sightings of the Galloway Puma, a  supposedly real British big cat, often reported as?
+  Ans: "panthers", "pumas", or "black cats"
+  Nodes: 9  Gold: 5  Dist: 4
+    [ 0 GOLD] Understanding the topic: The question is asking about the Galloway Puma, a supposed real British big
+    [ 1 GOLD] Identifying the nature of the Galloway Puma: The Galloway Puma is often considered to be an urban le
+    [ 2 DIST] Considering possible sources of information: Since the Galloway Puma is not a widely accepted or for
+    [ 3 DIST] Searching for reported sightings: We need to look for information about the location, time period, a
+    [ 4 DIST] Identifying the common description or classification of the sightings: Based on the information coll
+    [ 5 GOLD] Determining the reason behind the classification: This step will help us understand why sightings of
+    [ 6 DIST] Analyzing the credibility of the information: To provide a trustworthy answer, we need to verify the
+    [ 7 GOLD] Drawing a conclusion: Based on the above steps, we can determine what sightings of the Galloway Puma
+    [ 8 GOLD] Based on the available information, sightings of the Galloway Puma are often reported as "big cat si
+
+  ID : 5a7386ec554299623ed4abd7
+  Q  : What fortress rebuilt during the 17th century contains Naulakha Bazaar?
+  Ans: Lahore Fort
+  Nodes: 5  Gold: 3  Dist: 2
+    [ 0 DIST] Identify potential fortresses We know that several fortresses were built or rebuilt during the 17th 
+    [ 1 GOLD] Consider historical context The 17th century is an important period in the history of the Mughal Emp
+    [ 2 DIST] Recall fortresses associated with the Mughal Empire One Mughal Emperor associated with 17th-century 
+    [ 3 GOLD] Identify the Red Fort's bazaars The Red Fort is known to have various bazaars (markets) within its w
+    [ 4 GOLD] Confirm the location of Naulakha Bazaar After verifying the historical context and the layout of the
+
+  ID : 5ac2be75554299218029db0e
+  Q  : WNAV is an AM radio station part-owned by a game show host born in which year ?
+  Ans: 1946
+  Nodes: 9  Gold: 1  Dist: 8
+    [ 0 DIST] Identify the station: WNAV is an AM radio station.
+    [ 1 DIST] Research station ownership: Find out who owns WNAV and whether it is part-owned by any notable indiv
+    [ 2 DIST] Determine the game show host: The question states that the station is part-owned by a game show host
+    [ 3 GOLD] Identify the game show host: Based on known associations, the most prominent game show hosts include
+    [ 4 DIST] Check ownership ties: Among these, Alex Trebek, known for hosting "Jeopardy!", had Ohio connections,
+    [ 5 DIST] Focus on the specific host linked to WNAV: The clue suggests that the host is a notable figure.
+    [ 6 DIST] Research relevant game show hosts with a link to the station: It's known that Chuck Woolery, who hos
+    [ 7 DIST] Verify if WNAV is part-owned by Chuck Woolery: Multiple sources indicate that Chuck Woolery was invo
+    [ 8 DIST] Conclusion based on available data: The specific information points to Chuck Woolery as the game sho
+
+  ID : 5ae2d53955429928c42394eb
+  Q  : On what date did the man whom Ving Rhames played in "American Tragedy" die?
+  Ans: March 29, 2005
+  Nodes: 12  Gold: 3  Dist: 9
+    [ 0 DIST] Let's analyze the question carefully.
+    [ 1 GOLD] Identify the character Ving Rhames played in "American Tragedy".
+    [ 2 DIST] First, note that "American Tragedy" could refer to multiple works, but Ving Rhames is notably associ
+    [ 3 DIST] To narrow down, the more prominent and well-documented work is the 2000 television film "American Tr
+    [ 4 GOLD] Confirm the role Ving Rhames played in "American Tragedy" (2000).
+    [ 5 GOLD] In that film, Ving Rhames played the role of Robert Kardashian.
+    [ 6 DIST] Determine who Robert Kardashian is and whether he is the "man" referred to.
+    [ 7 DIST] Robert Kardashian was a well-known attorney and friend of O.J. Simpson. He died in 2003.
+    [ 8 DIST] Find the date of Robert Kardashian's death.
+    [ 9 DIST] Robert Kardashian died on September 30, 2003.
+    [10 DIST] Match the facts to the question: "On what date did the man whom Ving Rhames played in 'American Trag
+    [11 DIST] Since Ving Rhames played Robert Kardashian in "American Tragedy" (2000), and Robert Kardashian died 
+
+── 4. Label Quality Audit ────────────────────────────────────────────
+  100 random nodes saved to D:\gvcot\results\stage1_sample_nodes.csv
+
+── 5. Data Leakage Checks ────────────────────────────────────────────
+  [OK]   No duplicate graph IDs  (89,625 unique)
+  [OK]   No duplicate questions  (89,625 unique)
+
+── 6. Final Verdict ──────────────────────────────────────────────────
+  Label distribution   : HEALTHY   (42.13% gold)
+  Graph size           : OK        (avg 7.48 nodes/graph)
+  No data leakage      : OK
+  Structural integrity : WARNING
+
+  >>> ISSUES FOUND — review before Stage 2 <<<

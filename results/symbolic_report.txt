@@ -1,0 +1,60 @@
+=================================================================
+GV-CoT Stage 4 - Symbolic Constraints Report
+=================================================================
+
+Val graphs processed : 17,650
+Total edges checked  : 134,171
+Contradiction threshold (cosine sim): 0.5
+
+=================================================================
+PART 1 - DIAGNOSTIC METRICS  (main result)
+=================================================================
+
+-----------------------------------------------------------------
+Transitivity
+-----------------------------------------------------------------
+  Violation rate : 0.0773
+  (10,371 edges where gold->hallucinated transition detected)
+
+-----------------------------------------------------------------
+Contradiction Detection
+-----------------------------------------------------------------
+  Contradiction rate : 0.4054
+  (54,392 edges where cosine sim < 0.5)
+
+-----------------------------------------------------------------
+Graph Consistency Score
+-----------------------------------------------------------------
+  Mean consistency : 0.8591
+  (proportion of edges where both endpoints share same predicted label)
+
+-----------------------------------------------------------------
+GAT Baseline F1 (reference)
+-----------------------------------------------------------------
+  Gold (1) F1  : 0.6473
+  Hall (0) F1  : 0.6124
+  Macro F1     : 0.6299
+
+=================================================================
+PART 2 - HEURISTIC CORRECTION EXPERIMENT
+  [!] Upper-bound heuristic only. NOT a main claim.
+  Rule: if node predicted hallucinated but all predecessors
+        are predicted gold -> override to gold.
+=================================================================
+
+  Corrections applied          : 10,371
+  Symbolic post-proc F1 (gold) : 0.6292  (delta -0.0181 vs GAT)
+  Symbolic post-proc F1 (hall) : 0.5324
+  Symbolic post-proc Macro F1  : 0.5808  (delta -0.0491 vs GAT)
+
+-----------------------------------------------------------------
+Interpretation
+-----------------------------------------------------------------
+  [OK] Low transitivity violation rate (0.0773):
+    GAT predictions are mostly consistent with reasoning chain flow.
+  [!] High contradiction rate (0.4054):
+    Many connected node pairs have low semantic similarity.
+
+=================================================================
+Stage 4 Symbolic Constraints - COMPLETE
+=================================================================

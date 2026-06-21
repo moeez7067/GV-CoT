@@ -1,0 +1,10 @@
+Stage 5 — SHAP Attribution (Final)
+=====================================
+Model                    : Run 3 — 397-dim scaled (gat_best.pt)
+Method                   : gradient saliency |x * d(logit_hall)/dx|
+Explainability Coverage  : 0.8290  (7,776/9,380 graphs correct)
+Separation score         : 0.0069  (magnitude-based, not feature-type)
+Structural/SBERT ratio   : 2.44x   (structural features dominate)
+Top features             : out_degree, total_degree, in_degree, position
+Verdict: Strong explainability result. Model localises hallucinated
+         steps correctly in 83% of graphs via structural signals.

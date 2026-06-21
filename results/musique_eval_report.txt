@@ -1,0 +1,42 @@
+=================================================================
+GV-CoT -- MuSiQue Cross-Dataset Evaluation
+=================================================================
+
+Model          : Run 3 -- 397-dim scaled (trained on HotpotQA)
+Test dataset   : MuSiQue (answerable questions only)
+Graphs         : 19,938
+Total nodes    : 398,737
+
+-----------------------------------------------------------------
+Classification Report
+-----------------------------------------------------------------
+                precision    recall  f1-score   support
+
+distractor (0)       0.88      0.29      0.44    352124
+      gold (1)       0.11      0.69      0.20     46613
+
+      accuracy                           0.34    398737
+     macro avg       0.50      0.49      0.32    398737
+  weighted avg       0.79      0.34      0.41    398737
+
+-----------------------------------------------------------------
+HotpotQA vs MuSiQue Comparison
+-----------------------------------------------------------------
+Metric                   HotpotQA      MuSiQue      Delta
+F1 Gold (1)                0.6473       0.1962    -0.4511
+F1 Hall (0)                0.6124       0.4352    -0.1772
+F1 Macro                   0.6299       0.3157    -0.3142
+
+-----------------------------------------------------------------
+Interpretation
+-----------------------------------------------------------------
+  [!] Limited generalisation: Macro F1 drop -0.3142.
+    Significant domain shift -- model is HotpotQA-specific.
+
+Note: HotpotQA used CoT chain steps as nodes (avg 7.58 nodes/graph).
+      MuSiQue uses context paragraphs as nodes (20 nodes/graph).
+      Performance gap partly reflects this structural difference.
+
+=================================================================
+MuSiQue Evaluation -- COMPLETE
+=================================================================

@@ -1,0 +1,21 @@
+{
+  "dataset": "MuSiQue CoT chains (answerable only)",
+  "model": "Run 3 -- 397-dim scaled, trained on HotpotQA",
+  "graphs": 19937,
+  "total_nodes": 163714,
+  "musique_cot": {
+    "f1_gold": 0.5673,
+    "f1_hall": 0.5001,
+    "f1_macro": 0.5337
+  },
+  "hotpotqa_reference": {
+    "f1_gold": 0.6473,
+    "f1_hall": 0.6124,
+    "f1_macro": 0.6299
+  },
+  "delta": {
+    "f1_gold_delta": -0.08,
+    "f1_macro_delta": -0.0962
+  },
+  "classification_report": "                precision    recall  f1-score   support\n\ndistractor (0)       0.85      0.35      0.50    107214\n      gold (1)       0.42      0.88      0.57     56500\n\n      accuracy                           0.54    163714\n     macro avg       0.63      0.62      0.53    163714\n  weighted avg       0.70      0.54      0.52    163714\n"
+}
