@@ -54,3 +54,87 @@ graphs/*.pkl
 #    - graph_template.html         (the 3D graph, loaded by app.py)
 #    - results/**                  (all evaluation outputs)
 # ─────────────────────────────────────────────────────────────
+
+# ─────────────────────────────────────────────────────────────
+#  Extras from GitHub Python template (not covered above)
+# ─────────────────────────────────────────────────────────────
+
+# ─── C extensions ───
+*.so
+
+# ─── Distribution / packaging ───
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg
+MANIFEST
+*.manifest
+*.spec
+
+# ─── Installer logs ───
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ─── Test / coverage ───
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# ─── Translations ───
+*.mo
+*.pot
+
+# ─── Jupyter / IPython ───
+profile_default/
+ipython_config.py
+
+# ─── Type checkers ───
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# ─── Cython ───
+cython_debug/
+
+# ─── Package manager artifacts ───
+__pypackages__/
+.pdm-python
+.pdm-build/
+.pixi
+.ruff_cache/
+.pypirc
+
+# ─── Misc tool artifacts ───
+tempCodeRunnerFile.py
+.ropeproject
+.spyderproject
+.spyproject
+.scrapy
+/site
+docs/_build/
+.pybuilder/
+target/
+.abstra/
+.streamlit/secrets.toml
